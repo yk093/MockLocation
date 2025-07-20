@@ -21,7 +21,7 @@
 
 当アプリのプライバシーポリシーは以下からご確認いただけます。
 
-[プライバシーポリシーはこちら](https://yk093.github.io/MockGPS/privacy)
+[プライバシーポリシーはこちら](https://yk093.github.io/MockLocation/privacy)
 
 ---
 
