@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/snackbarRoot"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Google Map Fragment -->
+        <fragment
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 上部のコントロール群 -->
+        <LinearLayout
+            android:id="@+id/topControls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:padding="8dp"
+            android:background="#AA000000"
+            android:fitsSystemWindows="true" >
+
+            <!-- マーカーモード選択 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/buttonStartPoint"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="開始点"
+                    android:textSize="14sp"
+                    android:backgroundTint="@drawable/button_background" />
+
+                <Button
+                    android:id="@+id/buttonViaPoint"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="経由点"
+                    android:textSize="14sp"
+                    android:backgroundTint="@drawable/button_background" />
+
+                <Button
+                    android:id="@+id/buttonEndPoint"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="終了点"
+                    android:textSize="14sp"
+                    android:backgroundTint="@drawable/button_background" />
+            </LinearLayout>
+
+            <!-- 速度入力 -->
+            <EditText
+                android:id="@+id/editSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="速度 (km/h)"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp" />
+
+            <!-- 精度入力 -->
+            <EditText
+                android:id="@+id/editAccuracy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="精度 (m)"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- 更新間隔入力 -->
+            <EditText
+                android:id="@+id/editInterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="更新間隔 (ms)"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- ルート生成 -->
+            <Button
+                android:id="@+id/buttonGenerateRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="経路生成"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@drawable/button_background" />
+
+        </LinearLayout>
+
+        <!-- 下部の開始・停止ボタン -->
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="#66000000">
+
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="モック位置開始"
+                android:textSize="14sp"
+                android:backgroundTint="@drawable/button_background" />
+
+            <Button
+                android:id="@+id/buttonStop"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="モック位置停止"
+                android:textSize="14sp"
+                android:backgroundTint="@drawable/button_background" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 広告を画面下部に表示 -->
+    <LinearLayout
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#EEEEEE"
+        android:padding="8dp" />
+
+</LinearLayout>
