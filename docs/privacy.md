@@ -49,7 +49,7 @@
 
 プライバシーポリシーに関するご質問・ご意見は、以下のメールアドレスまでお問い合わせください。
 
-ykun.utilites@gmail.com
+ykun.utilities@gmail.com
 
 ---
 

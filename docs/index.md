@@ -29,7 +29,7 @@
 
 不具合の報告・ご意見などは以下のメールアドレスまでご連絡ください：
 
-`ykun.utilites@gmail.com`
+`ykun.utilities@gmail.com`
 
 ---
 
